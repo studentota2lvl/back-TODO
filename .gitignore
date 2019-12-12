@@ -1,0 +1,17 @@
+# pattern files
+*.*~
+*/target
+*.iml
+*.log
+*.tgz
+
+# files
+.env
+.vscode
+.DS_Store
+
+# folders
+node_modules/
+logs/
+.idea/
+.nyc_output/
