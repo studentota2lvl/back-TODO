@@ -12,6 +12,7 @@ const { port } = server;
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cors());
 
 // defining routes
