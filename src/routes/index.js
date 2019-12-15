@@ -6,10 +6,10 @@ const todoRouter = require('../routes/todo');
 module.exports = app => {
   app.use('/', router);
 
-  router.use(`/${TODO.root}`, todoRouter);
+  router.use(`/api/${TODO.root}`, todoRouter);
 
   // Handle 404
   app.use((req, res) => {
-    res.sendStatus(HTTP_STATUS_CODES.notFound.code);
+    res.status(HTTP_STATUS_CODES.notFound.code).send('This endpoint was not found');
   });
 };
