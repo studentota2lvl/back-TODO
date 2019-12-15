@@ -11,10 +11,8 @@ module.exports = {
     {
       name: `${name}:${process.env.PORT}`,
       script: main,
-      exec_mode: 'cluster',
-      instances: '1',
       autorestart: true,
-      max_restarts: 10,
+      max_restarts: 1,
       min_uptime: '5s',
       watch: false,
       error_file: path.posix.join(process.env.LOGS_FOLDER, `${name}-err.log`),
